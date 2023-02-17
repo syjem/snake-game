@@ -14,7 +14,9 @@ h1 {
 
 canvas {
     width: 40%;
+    display: block;
     background-color: black;
+    margin: 10px auto;
 } 
 
 #jump {
