@@ -9,6 +9,7 @@ window.onload = function() {
     var t = Date.now();
     let speed = 300;
     let dir = 0;
+    let score = 0;
     
     let up = document.getElementById('up');
     let down = document.getElementById('down');
@@ -38,13 +39,12 @@ window.onload = function() {
     function draw() {
         var timePassed = (Date.now() - t) / 1000;
         t = Date.now();
-        var fps = Math.round(1 / timePassed);
 
         context.clearRect(0, 0, 600, 400);
         
         context.font = '25px Arial';
         context.fillStyle = '#D61355';
-        context.fillText("FPS: " + fps, 20, 30);
+        context.fillText("Score: " + score, 20, 30);
 
         context.beginPath();
         context.rect(x, y, 100, 100);
@@ -76,6 +76,13 @@ window.onload = function() {
                 y -= (speed * timePassed);
             }
         } 
+
+        if (coinX <= x+100 && x <= coinX+50 && coinY <= y+100 && y <= coinY+50) {
+            score++;
+            coinX = Math.random() * (600-50);
+            coinY = Math.random() * (400-50);
+        }
+
 
         window.requestAnimationFrame(draw);
     }
