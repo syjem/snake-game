@@ -34,3 +34,13 @@ canvas {
     background-color: #D61355;
     color: #FFFBEB;
 }
+
+#up, #left, #down, #right {
+    padding: 5px 15px;
+    margin: 1px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D61355;
+    color: #FFFBEB;
+    
+}
