@@ -3,6 +3,8 @@ window.onload = function() {
     var context = canvas.getContext("2d");
     var x = 250;
     var y = 150;
+    var coinX = Math.random() * (600-50); 
+    var coinY = Math.random() * (400-50);
     
     var t = Date.now();
     let speed = 300;
@@ -49,6 +51,11 @@ window.onload = function() {
         context.fillStyle="red";
         context.fill();
 
+        context.beginPath();
+        context.rect(coinX, coinY, 50, 50);
+        context.fillStyle="#e3c228";
+        context.fill(); 
+
         if(dir == 1) { 
             if(x+100 < 600) {
                 x += (speed * timePassed);
@@ -74,3 +81,4 @@ window.onload = function() {
     }
     draw();
 }
+
