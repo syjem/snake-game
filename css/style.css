@@ -8,32 +8,12 @@ body {
     background-color: #c3c3c3;
 }
 
-h1 {
-    color: #4c6ebb;
-    margin: 20px;
-}
-
-p {
-    margin: 20px;
-    font-size: 18px;
-}
-
 canvas {
     width: 40%;
     display: block;
     background-color: black;
     margin: 10px auto;
 } 
-
-#jump {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    display: block;
-    margin: 0 auto;
-    background-color: #D61355;
-    color: #FFFBEB;
-}
 
 #up, #left, #down, #right {
     padding: 5px 15px;
